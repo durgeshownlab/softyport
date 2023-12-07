@@ -1,0 +1,52 @@
+// code for flex row 
+@mixin flex-row($horizontal_align: flex-start, $vertical_align: stretch)
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: $horizontal_align;
+    align-items: $vertical_align;
+}
+
+// code for flex row reverse
+@mixin flex-row-reverse($horizontal_align: flex-start, $vertical_align: stretch)
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: $horizontal_align;
+    align-items: $vertical_align;
+}
+
+// code for flex column 
+@mixin flex-col($horizontal_align: flex-start, $vertical_align: stretch)
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: $vertical_align;
+    align-items: $horizontal_align;
+}
+
+// code for flex column reverse 
+@mixin flex-col-reverse($horizontal_align: flex-start, $vertical_align: stretch)
+{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: $vertical_align;
+    align-items: $horizontal_align;
+}
+
+//code for height and width
+@mixin wh($width: auto, $height: auto)
+{
+    height: $height;
+    width: $width;
+}
+
+// code for text ellipsis
+@mixin text-ellipsis($line)
+{
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
