@@ -446,8 +446,7 @@
     }
 }
 
-// cod for drop-your-idea-container section 
-
+// code for drop-your-idea-container section 
 .drop-your-idea-container
 {
     @include wh(100%, auto);
@@ -776,6 +775,177 @@
         &
         {
             padding: 20px 20px;
+        }
+    }
+}
+
+// code for our service section 
+.our-service-container
+{
+    @include wh(100%, auto);
+    
+    margin-top: 50px;
+    padding: 20px 50px;
+    // border: 2px solid red;
+    background-color: $primary-light;
+
+    .our-service
+    {
+        @include wh(100%, auto);
+
+        .our-service-heading
+        {
+            @include wh(100%, auto);
+            display: flex;
+            justify-content: center;
+
+
+            h1
+            {
+                width: max-content;
+                text-align: center;
+                color: $primary;
+                text-transform: uppercase;
+                position: relative;
+                z-index: 1;
+                font-size: 2.5rem;
+
+                &::after
+                {
+                    content: 'OUR SERVICES';
+                    position: absolute;
+                    top: -50%;
+                    left: -50%;
+                    color: $primary;
+                    font-size: 5rem;
+                    z-index: -1;
+                    text-wrap: nowrap;
+                    opacity: .1;
+                }
+
+            }
+        }
+
+        .our-service-card-container
+        {
+            @include wh(100%, auto);
+            @include flex-row();
+
+            margin-top: 40px;
+            flex-wrap: wrap;
+            gap: 50px 130px;
+
+            @media (max-width: $laptop-breakdown) {
+                &
+                {
+                    gap: 40px 15px;
+                }
+            }
+
+            @media (max-width: $tablet-breakdown) {
+                &
+                {
+                    gap: 10px 15px;
+                }
+            }
+
+            @media (max-width: $mobile-breakdown) {
+                &
+                {
+                    gap: 10px;
+                }
+            }
+
+            .our-service-card 
+            {
+                @include wh(250px, auto);
+                @include flex-col(center, space-between);
+                // max-width: 22%;
+                min-width: 250px;
+                // border: 2px solid red;
+                background-color: $white;
+                flex: 1;
+
+                .our-service-card-image-container
+                {
+                    @include wh(100%, auto);
+
+                    position: relative;
+
+                    .our-service-card-content-container
+                    {
+                        @include wh(100%, 100%);
+
+                        // border: 2px solid rgb(2, 217, 255);
+                        background-color: $primary-light;
+                        position: absolute;
+                        display: none;
+
+                        ul 
+                        {
+                            list-style: none;
+                            padding: 10px;
+
+                            li 
+                            {
+
+                                a
+                                {
+                                    text-decoration: none;
+                                    color: $primary;
+                                }
+                            }
+                        }
+                    }
+
+                    .our-service-card-image 
+                    {
+                        img 
+                        {
+                            @include wh(100%, auto);
+
+                            object-fit: cover;
+                            display: block
+
+                        }
+                    }
+                }
+
+                .our-service-card-title-container
+                {
+                    @include wh(100%, auto);
+
+                    text-decoration: none;
+                    color: $white;
+                    background-color: $primary;
+
+                    .our-service-card-title
+                    {
+                        // border: 2px solid red;
+
+
+                        h3 
+                        {
+                            text-align: center;
+                            padding: 20px 2px;
+                            text-transform: uppercase;
+                            letter-spacing: .08rem;
+                            text-wrap: pretty;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                @media (max-width: $laptop-breakdown) {
+                    @include wh(250px, auto);
+                    min-width: 250px;
+                }
+
+                @media (max-width: $tablet-breakdown) {
+                    @include wh(250px, auto);
+                    min-width: 250px;
+                }
+            }
         }
     }
 }
