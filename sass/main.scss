@@ -883,6 +883,7 @@
             {
                 @include flex-col(center, space-between);
                 background-color: $white;
+                box-shadow: 0 15px 20px rgba($black, .5);
 
                 .our-service-card-image-container
                 {

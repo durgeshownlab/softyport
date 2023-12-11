@@ -825,6 +825,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
 }
 .our-service-container .our-service .our-service-card-container .our-service-card .our-service-card-image-container {
   height: auto;
